@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Special Number</title>
+  </head>
+  
+    <h2>
+      Program to Check the Special number :
+    </h2>
+    
+    <p>Enter the number :</p>
+    <input type="number" id="side1" name="number" value="145" />
+    
+    <button onclick="check()">Check Now</button>
+    <h2 id ="demo">Result</h2>
+    
+
+    <script>
+
+        // for special number
+      function check()
+      {
+
+        let n = document.getElementById("side1").value;
+        let r , sum = 0 , temp ;
+        temp = n ;
+        while(n > 0)
+        {
+          r = n % 10;
+          sum = sum + factorial(r);
+          n = parseInt(n/10);
+        } 
+        n = temp;
+        if(n == sum)
+          document.getElementById("demo").innerText = "Special Number:";
+        else
+          document.getElementById("demo").innerText = " Not Special Number:";  
+
+      }
+
+    //   for factorial calculation
+
+      function factorial(n)
+      {
+        fact = 1;
+        while(n>1)
+        {
+          fact = fact * n;
+          n--;
+        }
+        
+        return fact;
+
+      }
+
+    </script>
+
+    
+    
+  </body>
+</html>
+
+

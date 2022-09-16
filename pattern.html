@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pattern</title>
+  </head>
+  
+    <h2>
+      Program to Print the pattern using rows number :
+    </h2>
+    
+    <p>Enter the Rows number :</p>
+    <input type="number" id="side1" name="number" value="4" />
+    
+    <button onclick="pattern()">Check Now</button>
+    <h2>Pattern -:</h2>
+    
+
+    <script>
+      function pattern()
+      {
+
+        let n = document.getElementById("side1").value;
+        let i, j , sum = 0;
+        for(i= 1; i<=n ; i++)
+        {
+            for(j=1;j<=i;j++)
+            {
+                sum +=1;
+                document.write( sum , "  ");
+
+            }
+            document.write("<br/>");
+
+        }
+        
+        
+     
+      }
+
+    </script>
+
+    
+    
+  </body>
+</html>
+
+

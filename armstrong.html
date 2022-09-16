@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Armstrong Number</title>
+  </head>
+  
+    <h2>
+      Program to Check the Armstrong number :
+    </h2>
+    
+    <p>Enter the number :</p>
+    <input type="number" id="side1" name="number" value="153" />
+    
+    <button onclick="check()">Check Now</button>
+    <h2 id ="demo">Result</h2>
+    
+
+    <script>
+      function check()
+      {
+
+        let n = document.getElementById("side1").value;
+        let r , sum = 0 , temp ;
+        temp = n ;
+        while(n > 0)
+        {
+          r = n % 10;
+          sum = sum + (r*r*r);
+          n = parseInt(n/10);
+        } 
+        n = temp;
+        if(n == sum)
+          document.getElementById("demo").innerText = "Armstrong Number:";
+        else
+          document.getElementById("demo").innerText = " Not Armstrong Number:";  
+
+      }
+
+    </script>
+
+    
+    
+  </body>
+</html>
+
+
